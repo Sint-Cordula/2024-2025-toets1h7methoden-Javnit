@@ -1,4 +1,6 @@
-﻿namespace Toets1H7Methoden
+﻿using System.Numerics;
+
+namespace Toets1H7Methoden
 {
     internal class Program
     {
@@ -41,6 +43,31 @@
             }
 
 
+        }
+       
+        public static int GetPincode(int aantalKarakters)
+        {
+            int getal = 0;
+            Random rnd = new Random();
+
+            getal = rnd.Next(0, aantalKarakters * 100);
+            for (int i = 1;  i < aantalKarakters; i++)
+            {
+                
+                Console.WriteLine(getal);
+            }
+
+            return getal;
+        }
+
+        public static bool Aanmelden(int pincode, int pincodeTest)
+        {
+            bool result = false;
+            if (pincode == pincodeTest  )
+            {
+                result = true;
+            }
+            return result;
         }
 
     }
